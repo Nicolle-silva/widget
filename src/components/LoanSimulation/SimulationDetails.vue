@@ -1,4 +1,5 @@
 <template>
+<!-- Resumen 2-->
   <div>
     <button
       class="btn btn-link mb-3 pl-0"
@@ -36,14 +37,23 @@
     <div class="row">
       <div class="col-4">
         <div class="form-group">
-          <label for="">Run</label>
-          <input v-model="message" class="d-block form-control" placeholder="Ej.: 11.111.111-1"/>
+          <label for="">RUN</label>
+          <input
+            v-model="rut"
+            v-format-rut
+            type="text"
+            placeholder="Ej.: 11.111.111-1"
+            class="d-block form-control">
         </div>
       </div>
        <div class="col-4">
         <div class="form-group">
           <label for="">Ingreso Mensual</label>
-          <input v-model="message" class="d-block form-control" placeholder="Ej.: 750.000"/>
+          <money
+            id="amount"
+            v-model="money"
+            v-bind="moneyOptions"
+            class="d-block form-control" />
         </div>
       </div>
     </div>
@@ -129,20 +139,28 @@
         </div>
       </div>
     </div>
-    <button
+    <a href="https://azurian.modyo.cloud/hackaton/resultados"
       class="btn btn-primary btn-lg btn-block mt-5">
       {{ $t('main.summary.request-advance-btn') }}
-    </button>
+    </a>
   </div>
 </template>
 <script>
 import { currency } from '@modyo/financial-commons';
 import { mapState, mapGetters } from 'vuex';
+import { formatRut } from '@modyo/financial-commons';
+import { Money } from 'v-money-no-negative';
 
 export default {
   name: 'SimulationDetails',
   filters: {
     currency,
+  },
+  components: {
+    Money,
+  },
+  directives: {
+    formatRut
   },
   computed: {
     ...mapState([
@@ -186,6 +204,24 @@ export default {
       set(value) {
         this.$store.commit('SET_SHOW_SIMULATION_DETAILS', value);
       },
+    },
+    moneyOptions() {
+      if (this.isLangEn) {
+        return {
+          prefix: '$',
+          decimal: '.',
+          thousands: ',',
+          precision: 2,
+          maxlength: this.amountMaxLength + 3,
+        };
+      }
+      return {
+        prefix: '$',
+        decimal: ',',
+        thousands: '.',
+        precision: 0,
+        maxlength: this.amountMaxLength,
+      };
     },
   },
 };

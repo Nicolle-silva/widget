@@ -1,4 +1,5 @@
 <template>
+<!-- Resume 1-->
   <div>
     <p class="consumer-loan__simulation__title h5 mb-4 d-flex align-items-center text-primary">
       <button
@@ -17,8 +18,6 @@
         <strong>{{ totalLoanAmount | currency($t('currency.format')) }}</strong>
       </p>
     </div>
-
-
     <div
       class="consumer-loan__sumary-fees-container p-4 my-5 my-lg-4 d-flex justify-content-between rounded">
       <div
@@ -77,32 +76,11 @@
       </div>
     </div>
 
-    <div class="text-right d-none d-lg-block">
-      <button
-        class="btn mx-auto btn-link border-0 pr-0"
-        @click="showSimulationDetails = true">
-        {{ $t('main.simulation-summary.view-detail-btn') }}
-        <font-awesome-icon
-          icon="chevron-right"
-          class="ml-2" />
-      </button>
-    </div>
-
-    <div class="d-lg-none mt-5">
-      <button
-        class="btn mx-auto btn-secondary btn-lg btn-block border-0 pr-0"
-        @click="showSimulationDetails = true">
-        {{ $t('main.simulation-summary.view-detail-btn') }}
-        <font-awesome-icon
-          icon="chevron-right"
-          class="ml-2" />
-      </button>
-    </div>
-
     <div class="pt-lg-4 text-center mt-3 mt-lg-4">
       <button
-        class="btn btn-primary btn-lg btn-block">
-        {{ $t('main.simulation-summary.request-advance-btn') }}
+        class="btn btn-primary btn-lg btn-block"
+        @click="showSimulationDetails = true">
+        {{ $t('main.simulation-summary.view-detail-btn') }}
       </button>
     </div>
   </div>

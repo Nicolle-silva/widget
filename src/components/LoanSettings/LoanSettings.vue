@@ -161,10 +161,6 @@
           </button>
         </div>
       </div>
-      <div class="col-12">
-        <p class="border-bottom"></p>
-        <a href="{{site.url}}" class="btn btn-primary">Simula tu crédito<i aria-hidden="true" class="fa fa-sign-in"></i></a>
-      </div>
     </div>
   </div>
 </template>
@@ -287,6 +283,7 @@ export default {
         this.$store.commit('SET_SHOW_SETTINGS_VIEW', value);
       },
     },
+    
     moneyOptions() {
       if (this.isLangEn) {
         return {
