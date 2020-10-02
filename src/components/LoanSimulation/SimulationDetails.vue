@@ -72,12 +72,12 @@
         </div>
       </div>
       <div class="row mt-4">
-        <div class="col-12 col-lg-6 text-center text-lg-left">
+        <div class="col-12 text-center text-lg-left">
           <p class="consumer-loan__simulator-details-total-credit-cost h5 text-primary">
             {{ $t('main.summary.credit-total-cost') }}
           </p>
         </div>
-        <div class="col-12 col-lg-6 text-center text-lg-right font-weight-normal">
+        <div class="col-12 text-center text-lg-right font-weight-normal">
           <p class="h5 text-primary">
             {{ totalLoanAmount | currency($t('currency.format')) }}
           </p>

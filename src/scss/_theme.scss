@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color:#3e3e3e00;
 }
 
 /******************
@@ -104,7 +105,7 @@ VUE SLIDER VARIABLES
 *******************/
 
 /* Set the theme color of the component */
-$themeColor: #2e4553; /* stylelint-disable-line scss/dollar-variable-pattern */
+$themeColor: #442a44; /* stylelint-disable-line scss/dollar-variable-pattern */
 @import "~vue-slider-component/lib/theme/default.scss";
 
 /******************

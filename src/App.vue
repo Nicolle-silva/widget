@@ -6,16 +6,16 @@
     <div class="consumer-loan__container container-lg">
       <div class="consumer-loan__row row">
         <loan-settings
-          class="col-lg-6" />
+          class="col-lg-12" />
         <simulation
           v-if="activeDetailInfo || (!showMinMessage && !showMaxMessage && account)"
-          class="col-lg-6" />
+          class="col-lg-12" />
         <initial-message
           v-else-if="!showMaxMessage && !activeDetailInfo"
-          class="col-lg-6" />
+          class="col-lg-12" />
         <max-quota-message
           v-else-if="showMaxMessage"
-          class="col-lg-6" />
+          class="col-lg-12" />
       </div>
     </div>
   </div>

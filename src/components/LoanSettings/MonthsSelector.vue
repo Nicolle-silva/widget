@@ -87,6 +87,8 @@ export default {
 
   .card-header {
     padding: .75rem 1.25rem;
+    background:$primary-100;
+    color:$white;
   }
 
   .btn-selector.btn-block {
