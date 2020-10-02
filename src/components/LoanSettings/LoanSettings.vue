@@ -1,7 +1,12 @@
 <template>
-  <div
-    v-if="showSettingsView"
-    class="p-4 p-sm-5 d-flex flex-column d-lg-block">
+<div v-if="showSettingsView">
+  <div class="col-12">
+    <h2 class="h5 mb-4 text-primary">
+      {{ $t('main.title') }}
+    </h2>
+  </div>
+</div>
+  <div v-if="showSettingsView" class="p-4 p-sm-5 d-flex flex-column d-lg-block">
     <h2 class="h5 mb-4 text-primary">
       {{ $t('main.title') }}
     </h2>
