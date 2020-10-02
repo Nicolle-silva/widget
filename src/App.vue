@@ -1,7 +1,7 @@
 <template>
   <div
     id="consumer-loan"
-    class="consumer-loan py-lg-5"
+    class="consumer-loan pt-lg-5"
     :class="{'h-100': !showSettingsView}">
     <div class="consumer-loan__container container-lg">
       <div class="consumer-loan__row row">

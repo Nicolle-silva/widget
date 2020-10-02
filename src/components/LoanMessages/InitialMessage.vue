@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!--div
     class="bg-tertiary-20 p-5 d-none d-lg-flex align-items-center">
     <div>
       <span class="consumer-loan__initial-msg-icon"><font-awesome-icon icon="arrow-circle-left" /></span>
@@ -12,7 +12,7 @@
         </strong>
       </i18n>
     </div>
-  </div>
+  </div-->
 </template>
 <script>
 export default {

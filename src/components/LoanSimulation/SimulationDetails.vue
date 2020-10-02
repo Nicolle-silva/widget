@@ -8,7 +8,52 @@
         class="mr-2" /> {{ $t('main.summary.view-summary-btn') }}
     </button>
 
+    <div class="row">
+     <div class="col-12 text-center text-lg-left">
+        <p class="consumer-loan__simulator-details-total-credit-cost h5 text-primary">
+          {{ $t('main.summary.credit-data') }}
+        </p>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="">Nombres</label>
+          <input v-model="message" class="d-block form-control" placeholder="Ej.: Carlos Andres"/>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="form-group">
+          <label for="">Apellido paterno</label>
+          <input v-model="message" class="d-block form-control" placeholder="Ej.: Olea"/>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="form-group">
+          <label for="">Apellido Materno</label>
+          <input v-model="message" class="d-block form-control" placeholder="Ej.: Vera"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="">Run</label>
+          <input v-model="message" class="d-block form-control" placeholder="Ej.: 11.111.111-1"/>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="form-group">
+          <label for="">Ingreso Mensual</label>
+          <input v-model="message" class="d-block form-control" placeholder="Ej.: 750.000"/>
+        </div>
+      </div>
+    </div>
+
     <div class="mb-5 mt-lg-0 mb-lg-4">
+      <div class="col-12 text-center text-lg-left">
+        <p class="consumer-loan__simulator-details-total-credit-cost h5 text-primary">
+          {{ $t('main.summary.data-credit') }}
+        </p>
+      </div>
       <div class="bg-white px-3 pt-3 pb-2 rounded">
         <div class="d-flex justify-content-between mb-2">
           <strong>{{ $t('main.summary.credit-total-amount') }}</strong>

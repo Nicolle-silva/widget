@@ -18,6 +18,7 @@
       </p>
     </div>
 
+
     <div
       class="consumer-loan__sumary-fees-container p-4 my-5 my-lg-4 d-flex justify-content-between rounded">
       <div
